@@ -9,4 +9,7 @@ import datetime
 from .models import *
 
 def loginUser(request):
-    return render(request, "LoginUser.html")
+    if request.method == "POST":
+        
+    else:
+        return render(request, "LoginUser.html")
