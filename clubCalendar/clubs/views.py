@@ -13,4 +13,10 @@ def loginClub(request):
     return render(request, "LoginClub.html")
 
 def loginUser(request):
-    render(request, "LoginUser.html")
+    return render(request, "LoginUser.html")
+
+def signClub(request):
+    return render(request, "SignClub.html")
+
+def signUser(request):
+    return render(request, "SignUser.html")

@@ -4,5 +4,7 @@ from .import views
 
 urlpatterns = [
     path("loginClub", views.loginClub, name = "loginClub"),
-    path("loginUser", views.loginUser, name = "loginUser")
+    path("signClub", views.signClub, name = "signClub"),
+    path("loginUser", views.loginUser, name = "loginUser"),
+    path("signUser", views.signUser, name = "signUser")
 ]
