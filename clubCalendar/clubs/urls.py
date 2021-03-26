@@ -3,6 +3,6 @@ from django.urls.conf import include
 from .import views
 
 urlpatterns = [
-    path("", views.index, name = "index"),
-    path("LoginClub", views.LoginClub, name = "LoginClub")
+    path("loginClub", views.loginClub, name = "loginClub"),
+    path("loginUser", views.loginUser, name = "loginUser")
 ]

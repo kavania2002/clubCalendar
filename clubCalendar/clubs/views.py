@@ -8,7 +8,8 @@ import datetime
 
 from .models import *
 
-def index(request):
-    return render(request, "LoginUser.html")
-def LoginClub(request):
+
+def loginClub(request):
     return render(request, "LoginClub.html")
+def loginUser(request):
+    return render(request, "LoginUser.html")
