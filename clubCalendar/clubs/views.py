@@ -8,5 +8,5 @@ import datetime
 
 from .models import *
 
-def index(request):
+def loginUser(request):
     return render(request, "LoginUser.html")
