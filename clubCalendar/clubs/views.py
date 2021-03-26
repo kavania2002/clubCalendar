@@ -8,8 +8,9 @@ import datetime
 
 from .models import *
 
+
+def loginClub(request):
+    return render(request, "LoginClub.html")
+
 def loginUser(request):
-    if request.method == "POST":
-        
-    else:
-        return render(request, "LoginUser.html")
+    render(request, "LoginUser.html")
