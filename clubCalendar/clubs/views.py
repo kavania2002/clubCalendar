@@ -10,3 +10,5 @@ from .models import *
 
 def index(request):
     return render(request, "LoginUser.html")
+def LoginClub(request):
+    return render(request, "LoginClub.html")

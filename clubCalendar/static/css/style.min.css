@@ -26,7 +26,7 @@ h6,
   margin-top: 0; }
 
 a {
-  color: #ff00cc;
+  color: #FBCB04;
   transition: all .3s ease-in-out; }
 
 a:focus,
@@ -36,7 +36,7 @@ button:focus {
 .btn:hover,
 a:hover {
   text-decoration: none;
-  color: #333399; }
+  color: #19ADF8; }
 
 img {
   max-width: 100%; }
@@ -116,11 +116,11 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ff00cc;
+    background: #fff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #19ADF8, #FBCB04);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #0ADDFC, #FBCB04);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .jumbotron h1 {
     line-height: .9;
@@ -147,11 +147,11 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ff00cc;
+    background: #FBCB04;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #19ADF8, #DD4132FF);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #19ADF8, #fb743e);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .overlay.bg-white {
     color: #000; }
@@ -175,12 +175,12 @@ section {
 
 .btn-primary {
   display: inline-block;
-  background-color: #ff00cc;
-  border-color: #ff00cc;
+  background-color: #FBCB04;
+  border-color: #FBCB04;
   color: #fff; }
   .btn-primary:hover {
-    background-color: #333399;
-    border-color: #333399;
+    background-color: #19ADF8;
+    border-color: #19ADF8;
     color: #fff; }
 
 .btn-outline-primary {
@@ -189,8 +189,8 @@ section {
   background-image: none;
   border-color: #fff; }
   .btn-outline-primary:hover {
-    background-color: #333399;
-    border-color: #333399;
+    background-color: #19ADF8;
+    border-color: #19ADF8;
     color: #fff; }
 
 .btn-shadow {
@@ -200,7 +200,7 @@ section {
   color: #000; }
 
 .btn-link {
-  color: #ff00cc; }
+  color: #FBCB04; }
 
 /*=====  End of BUTTON  ======*/
 /*==========================================
@@ -210,8 +210,8 @@ section {
   width: 2000px;
   height: 400px;
   background: #8E2DE2;
-  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: -webkit-linear-gradient(to right, #ff0202, #ffffff);
+  background: linear-gradient(to right, #f3890f, #ffe600);
   transform-origin: 50% 150% 0;
   position: absolute;
   left: 0;
@@ -223,7 +223,7 @@ section {
   height: 400px;
   background: #8E2DE2;
   background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: linear-gradient(to right, #00ffff, #1ca0f8);
   transform-origin: 65% 100% 0;
   position: absolute;
   right: 0;
@@ -399,7 +399,7 @@ section {
     transform: translateY(-13px); }
 
 .progress-bar {
-  background-color: #ff00cc; }
+  background-color: #FBCB04; }
 
 /*=====  End of FEATURES  ======*/
 /*=============================
@@ -420,7 +420,7 @@ section {
   padding-bottom: 50px; }
 
 .testi-icon {
-  color: #ff00cc; }
+  color: #FBCB04; }
 
 .testi-content {
   margin-top: 80px;
@@ -453,7 +453,7 @@ section {
     transition: box-shadow 0.3s ease, background-color 0.3s ease; }
   .owl-dot.active > span {
     background-color: transparent;
-    box-shadow: 0 0 0 2px #ff00cc; }
+    box-shadow: 0 0 0 2px #FBCB04; }
 
 .owl-dots {
   position: absolute;
@@ -691,7 +691,7 @@ section {
 =            FORM CONTROL            =
 ====================================*/
 .form-control:focus {
-  border-color: #ff00cc;
+  border-color: #FBCB04;
   box-shadow: 0 0 0 0.2rem rgba(253, 101, 90, 0.25); }
 
 .form-control::-webkit-input-placeholder {
@@ -730,22 +730,22 @@ section {
     top: 0;
     height: auto;
     width: 100%;
-    background: #ff00cc;
+    background: #FBCB04;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #19ADF8, #FBCB04);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #19ADF8, #FBCB04);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     z-index: 11; }
   #header-navbar {
     padding-top: 15px !important;
     padding-bottom: 15px !important; }
   .navbar-transparent .navbar-collapse {
-    background: #ff00cc;
+    background: #FBCB04;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #19ADF8, #FBCB04);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #19ADF8, #FBCB04);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 10px; } }
 
