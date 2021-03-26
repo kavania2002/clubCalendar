@@ -36,7 +36,7 @@ button:focus {
 .btn:hover,
 a:hover {
   text-decoration: none;
-  color: #19ADF8; }
+  color: #333399; }
 
 img {
   max-width: 100%; }
@@ -118,9 +118,9 @@ section {
     right: 0;
     background: #fff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #19ADF8, #FBCB04);
+    background: -webkit-linear-gradient(to right, #333399, #FBCB04);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0ADDFC, #FBCB04);
+    background: linear-gradient(to right, #333399, #FBCB04);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .jumbotron h1 {
     line-height: .9;
@@ -149,9 +149,9 @@ section {
     right: 0;
     background: #FBCB04;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #19ADF8, #DD4132FF);
+    background: -webkit-linear-gradient(to right, #333399, #DD4132FF);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #19ADF8, #fb743e);
+    background: linear-gradient(to right, #333399, #fb743e);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .overlay.bg-white {
     color: #000; }
@@ -179,8 +179,8 @@ section {
   border-color: #FBCB04;
   color: #fff; }
   .btn-primary:hover {
-    background-color: #19ADF8;
-    border-color: #19ADF8;
+    background-color: #333399;
+    border-color: #333399;
     color: #fff; }
 
 .btn-outline-primary {
@@ -189,8 +189,8 @@ section {
   background-image: none;
   border-color: #fff; }
   .btn-outline-primary:hover {
-    background-color: #19ADF8;
-    border-color: #19ADF8;
+    background-color: #333399;
+    border-color: #333399;
     color: #fff; }
 
 .btn-shadow {
@@ -223,7 +223,7 @@ section {
   height: 400px;
   background: #8E2DE2;
   background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-  background: linear-gradient(to right, #00ffff, #1ca0f8);
+  background: linear-gradient(to right, #333399, #1ca0f8);
   transform-origin: 65% 100% 0;
   position: absolute;
   right: 0;
@@ -732,9 +732,9 @@ section {
     width: 100%;
     background: #FBCB04;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #19ADF8, #FBCB04);
+    background: -webkit-linear-gradient(to right, #333399, #FBCB04);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #19ADF8, #FBCB04);
+    background: linear-gradient(to right, #333399, #FBCB04);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     z-index: 11; }
   #header-navbar {
@@ -743,9 +743,9 @@ section {
   .navbar-transparent .navbar-collapse {
     background: #FBCB04;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #19ADF8, #FBCB04);
+    background: -webkit-linear-gradient(to right, #333399, #FBCB04);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #19ADF8, #FBCB04);
+    background: linear-gradient(to right, #333399, #FBCB04);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 10px; } }
 
