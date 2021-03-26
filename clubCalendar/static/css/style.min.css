@@ -22,7 +22,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Comfortaa', cursive;
   margin-top: 0; }
 
 a {
@@ -65,7 +65,7 @@ section {
   box-shadow: 0 10px 30px 0 rgba(67, 80, 98, 0.24), 0 2px 4px 0 rgba(67, 80, 98, 0.1) !important; }
 
 #header-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -78,6 +78,8 @@ section {
 
 .navbar-nav .nav-link {
   color: #fff;
+  font-family: 'Comfortaa', cursive;;
+  font-size: 20px;
   transition: .3s ease; }
 
 .navbar-nav:hover li a {
@@ -550,7 +552,7 @@ section {
   z-index: 1002;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: #292929;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -692,7 +694,7 @@ section {
 ====================================*/
 .form-control:focus {
   border-color: #FBCB04;
-  box-shadow: 0 0 0 0.2rem rgba(253, 101, 90, 0.25); }
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5); }
 
 .form-control::-webkit-input-placeholder {
   opacity: .5; 

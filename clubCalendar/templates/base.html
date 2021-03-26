@@ -23,6 +23,8 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
@@ -35,11 +37,12 @@
 
 </head>
 
-<body data-spy="scroll" data-target="#navbar" class="static-layout">
+<body data-spy="scroll" data-target="#navbar" class="static-layout" style="background-color:#292929;">
     <nav id="header-navbar" class="navbar navbar-expand-lg py-4">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center text-white" href="/">
-                <h3 class="font-weight-bolder mb-0">Club Calendar</h3>
+                <img src="{% static 'img/logo.png' %}" alt="LOGO" width="100px">
+                <h3 class="font-weight-bolder mb-0" style="font-size: 35px;">Club Calendar</h3>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header"
                 aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +96,7 @@
             <form action="">
 
                 <div class="input-group md-form form-sm form-2 pl-0">
-                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search"
+                    <input class="form-control my-0 py-1 red-border" type="text" style="color: #f5f5f5;" placeholder="Search"
                         aria-label="Search">
                     <div class="input-group-append">
                         <button class="input-group-text red lighten-3" id="basic-text1">
@@ -118,7 +121,7 @@
 
                 </div>
                 <div class="col-lg-4 col-md-12 d-flex align-items-center">
-                    <p class="mx-auto text-center mb-0">&copy; 2019 Roxy. Design by <a href="https://gettemplates.co"
+                    <p class="mx-auto text-center mb-0" style="color:#f5f5f5;">&copy; 2019 Roxy. Design by <a href="https://gettemplates.co"
                             target="_blank">GetTemplates</a>.</p>
                 </div>
 
