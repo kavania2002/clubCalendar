@@ -33,6 +33,8 @@
             <h2 class="display-1 mb-4">SignIn Club Page</h2><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
           </div><br>
         <form method="post" name="loginClub" action="loginClub">
+          {% csrf_token %}
+
             <div class="row">
                 <div class="col-md-12 form-group">
                     <input type="text" class="form-control" id="clubname" name="clubname" placeholder="Club Name*" required>
@@ -41,7 +43,7 @@
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password*" required>
                 </div>
                 <div class="col-md-12 text-center"><br>
-                    <button class="btn btn-primary btn-shadow btn-lg" style="width: 150px; font-size: medium;" type="submit" name="submit">Sign In</button>
+                    <input class="btn btn-primary btn-shadow btn-lg" style="width: 150px; font-size: medium;" type="submit" name="submit" value="Sign In">
                 </div>
             </div><br>
         </form>        

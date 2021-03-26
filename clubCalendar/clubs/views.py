@@ -10,10 +10,29 @@ from .models import *
 
 
 def loginClub(request):
-    return render(request, "LoginClub.html")
+    if request.method == "POST":
+        name = request.POST['clubname']
+        password = request.POST['password']
+        club = Club.objects.filter(name = name)
+        if (club.exists()):
+            for i in club:
+                if (i.password == password):
+                    print("Successfully Logged In")
+                    club.logged = True
+                    return HttpResponse("Done")
+            else:
+                print("Unable to Login")
+                return redirect("loginClub")
+        else:
+            print("Unable to Login")
+            return redirect("loginClub")
+
+    else:
+        return render(request, "LoginClub.html")
 
 def loginUser(request):
     return render(request, "LoginUser.html")
+
 def clubPage(request):
     return render(request, "ClubPage.html")
 
