@@ -11,7 +11,14 @@ from .models import *
 
 def loginClub(request):
     return render(request, "LoginClub.html")
+
 def loginUser(request):
     return render(request, "LoginUser.html")
 def clubPage(request):
     return render(request, "ClubPage.html")
+
+def signClub(request):
+    return render(request, "SignClub.html")
+
+def signUser(request):
+    return render(request, "SignUser.html")
