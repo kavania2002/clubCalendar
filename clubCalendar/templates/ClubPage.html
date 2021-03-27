@@ -4,11 +4,12 @@
 {% load static %}
 
 {% block content %}	
-</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
+{% for post in posts %}
+<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
     <div class="rectangle-transparent-1"></div>
     <div class="rectangle-transparent-2"></div>
     <div class="container text-center">
-        <h2 class="display-2 mb-4">Club Name</h2><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
+        <h2 class="display-2 mb-4">{{post.clubName.name}}</h2><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
     </div>
 </div>	<!-- Blog Section -->
 <section id="blog" class="bg-grey" style="background-color: #292929; color:#f5f5f5;">
@@ -23,7 +24,6 @@
                 <div class="col-md-12 blog-holder" >
                     <div class="row">
                         <!-- Blog Item -->
-                        {% for post in posts %}
                         <div class="col-md-4 blog-item-wrapper" data-aos="fade-up" >
                             <div class="blog-item" style="background-color: #292929; color:#f5f5f5;">
                                 <div class="blog-img">
@@ -57,7 +57,6 @@
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
                         <!-- End of Blog Item -->
                     </div>
                 </div>
@@ -66,6 +65,8 @@
         </div>
     </div>
 </section>
+{% endfor %}
+
 <!-- End of Blog Section -->	<!-- Features Section-->
 <section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
     <div class="circle-1"></div>

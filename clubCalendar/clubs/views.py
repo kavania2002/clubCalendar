@@ -61,13 +61,16 @@ def loginUser(request):
     else: 
         return render(request, "LoginUser.html")
 
-def clubPage(request):
+def clubPage(request, name):
     if (request.method == "POST"):
         pass
     else:
-        clubs = Club.objects.all()
-        posts = Post.objects.all()
-        return render(request, "ClubPage.html", {'clubs':clubs, 'posts':posts})
+        club = Club.objects.get(name = name)
+        posts = []
+        for i in Post.objects.all():
+            if i.clubName.name == name:
+                posts.append(i)
+        return render(request, "ClubPage.html", {'club':club, 'posts':posts})
 
 def signClub(request):
     if (request.method == "POST"):
@@ -127,4 +130,9 @@ def singlePost(request,title):
 
 
 def userInterface(request):
-    return render(request,"UserInterface.html")
+    if (request.method == "POST"):
+        pass
+    else:
+        posts = Post.objects.all()
+        clubs = Club.objects.all()
+        return render(request,"UserInterface.html", {'posts':posts, 'clubs':clubs})
