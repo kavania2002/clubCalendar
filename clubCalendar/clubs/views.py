@@ -116,4 +116,6 @@ def signUser(request):
             return HttpResponse("User Created")
     else:
         return render(request, "SignUser.html")
-
+        
+def singlePost(request):
+    return render(request, "single.html")
