@@ -10,6 +10,8 @@ from .models import *
 
 
 def loginClub(request):
+    clubs = Club.objects.all()
+    posts = Post.objects.all()
     if request.method == "POST":
         name = request.POST['clubname']
         password = request.POST['password']
@@ -18,8 +20,9 @@ def loginClub(request):
             for i in club:
                 if (i.password == password):
                     print("Successfully Logged In")
-                    club.logged = True
-                    return HttpResponse("Done")
+                    i.logged = True
+                    i.save()
+                    return redirect("userInterface")
             else:
                 print("Unable to Login")
                 messages.info(request,"Incorrect Password")
@@ -33,18 +36,21 @@ def loginClub(request):
         return render(request, "LoginClub.html")
 
 def loginUser(request):
+    clubs = Club.objects.all()
+    posts = Post.objects.all()
     if (request.method == "POST"):
         email = request.POST['email']
         pwd = request.POST['password']
         pwd1 = request.POST['pwd2']
 
-        user = User.objects.filter(email = email)
+        users = User.objects.filter(email = email)
         if (pwd == pwd1):
-            if (user.exists()):
-                for i in user:
+            if (users.exists()):
+                for i in users:
                     if (i.password == pwd):
                         print("Successfully Logged in")
-                        return HttpResponse("Done USer")
+                        return redirect("")
+
                 else:
                     messages.info(request,"Incorrect Password")
                     print("Unable to Login")        
@@ -65,14 +71,17 @@ def clubPage(request, name):
     if (request.method == "POST"):
         pass
     else:
+        user = User.objects.get(logged = True)
         club = Club.objects.get(name = name)
         posts = []
         for i in Post.objects.all():
             if i.clubName.name == name:
                 posts.append(i)
-        return render(request, "ClubPage.html", {'club':club, 'posts':posts})
+        return render(request, "ClubPage.html", {'club':club, 'posts':posts,'user':user})
 
 def signClub(request):
+    clubs = Club.objects.all()
+    posts = Post.objects.all()
     if (request.method == "POST"):
         name = request.POST['name']
         email = request.POST['email']
@@ -91,7 +100,7 @@ def signClub(request):
             else:
                 club = Club.objects.create(name = name, email = email, password = pwd1, logged = True)
                 club.save()
-                return HttpResponse("Club created")
+                return redirect("userInterface")
         else:
             messages.info(request,"Password not matching")
             print("Password doesn't match")
@@ -100,6 +109,8 @@ def signClub(request):
         return render(request, "SignClub.html")
 
 def signUser(request):
+    posts = Post.objects.all()
+    clubs = Club.objects.all()
     if (request.method == "POST"):
         name = request.POST['fname']
         email = request.POST['email']
@@ -111,12 +122,9 @@ def signUser(request):
             print("Email already exists")
             return redirect("signUser")
         else:
-            user = User.objects.create( email = email, password = pwd)
-            user.name = name
-            user.phoneNumber = phoneNo
-            user.email = email
+            user = User.objects.create( email = email, password = pwd, phoneNumber = phoneNo, name = name, logged = True)
             user.save()
-            return HttpResponse("User Created")
+            return redirect("userInterface")
     else:
         return render(request, "SignUser.html")
         
@@ -130,9 +138,30 @@ def singlePost(request,title):
 
 
 def userInterface(request):
+    posts = Post.objects.all()
+    clubs = Club.objects.all()
     if (request.method == "POST"):
         pass
     else:
-        posts = Post.objects.all()
-        clubs = Club.objects.all()
-        return render(request,"UserInterface.html", {'posts':posts, 'clubs':clubs})
+        userLog = User.objects.filter(logged = True)
+        clubLog = Club.objects.filter(logged = True)
+        if (len(userLog) > 0):
+            return render(request,"UserInterface.html", {'posts':posts, 'clubs':clubs, 'club':clubLog, 'user':userLog[0]})
+        elif (len(clubLog) > 0):
+            return render(request,"UserInterface.html", {'posts':posts, 'clubs':clubs, 'club':clubLog[0], 'user':userLog})
+        else:
+            return render(request,"UserInterface.html", {'posts':posts, 'clubs':clubs, 'club':clubLog, 'user':userLog})
+
+
+def logout(request):
+    club = Club.objects.filter(logged = True)
+    user = User.objects.filter(logged = True)
+    for i in club:
+        i.logged = False
+        i.save()
+
+    for i in user:
+        i.logged = False
+        i.save()
+
+    return redirect("userInterface")

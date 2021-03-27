@@ -50,21 +50,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-nav-header">
                 <ul class="navbar-nav ml-auto">
-                    <div class="dropdown nav-item">
-                        <a class="nav-link club">Club</a>
-                        <div class="dropdown-content">
-                          <a href="loginClub"><h6>Login</h6></a>
-                          <a href="signClub"><h6>Sign Up</h6></a>
+                    {% if not user.logged and not club.logged %}
+                        <div class="dropdown nav-item">
+                            <a class="nav-link club">Club</a>
+                            <div class="dropdown-content">
+                            <a href="loginClub"><h6>Login</h6></a>
+                            <a href="signClub"><h6>Sign Up</h6></a>
+                            </div>
                         </div>
-                      </div>
-                    <div class="dropdown nav-item">
-                        <a class="nav-link club">User</a>
-                        <div class="dropdown-content">
-                            <a href="loginUser"><h6>Login</h6></a>
-                            <a href="signUser"><h6>Sign Up</h6></a>
+                        <div class="dropdown nav-item">
+                            <a class="nav-link club">User</a>
+                            <div class="dropdown-content">
+                                <a href="loginUser"><h6>Login</h6></a>
+                                <a href="signUser"><h6>Sign Up</h6></a>
+                            </div>
                         </div>
-                      </div>
-
+                    {% else %}  
+                        <a href = "logout" class="nav-link club">Logout</a>
+                    {% endif %}
                     <li class="nav-item">
                         <a id="side-search-open" class="nav-link" href="#">
                             <span class="lnr lnr-magnifier"></span>

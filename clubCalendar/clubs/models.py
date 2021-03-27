@@ -7,6 +7,7 @@ class User(models.Model):
     password = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
     phoneNumber = models.IntegerField(null=True)
+    logged = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -29,3 +30,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     tags = models.CharField(max_length=100)
     likes = models.IntegerField()
+
+
+    def __str__(self):
+        return self.title
