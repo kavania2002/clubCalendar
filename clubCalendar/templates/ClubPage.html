@@ -6,7 +6,12 @@
 {% block content %}	
 </div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
     <div class="container text-center">
-        <form action="">
+        {% for club in clubs %}
+        {% if club.name == "Programming" %}
+        <img src="{{ club.image.url }}" alt="mind_map" srcset="">
+        {% endif %}
+        {% endfor %}
+        <form action="uploadImg">
             <label for="img">Select image:</label>
             <input type="file" id="img" name="img" accept="image/*" style="background-color: #FBCB04;" capture>
             <input class="btn btn-primary btn-shadow btn-lg" type="submit" style="width: 150px; font-size: medium;" name="submit" value="Upload">

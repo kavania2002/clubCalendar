@@ -62,7 +62,12 @@ def loginUser(request):
         return render(request, "LoginUser.html")
 
 def clubPage(request):
-    return render(request, "ClubPage.html")
+    if (request.method == "POST"):
+        pass
+    else:
+        clubs = Club.objects.all()
+        
+        return render(request, "ClubPage.html", {'clubs':clubs})
 
 def signClub(request):
     if (request.method == "POST"):
@@ -111,3 +116,4 @@ def signUser(request):
             return HttpResponse("User Created")
     else:
         return render(request, "SignUser.html")
+
