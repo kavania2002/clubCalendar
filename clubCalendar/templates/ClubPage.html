@@ -6,16 +6,6 @@
 {% block content %}	
 </div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
     <div class="container text-center">
-        {% for club in clubs %}
-        {% if club.name == "Programming" %}
-        <img src="{{ club.image.url }}" alt="mind_map" srcset="">
-        {% endif %}
-        {% endfor %}
-        <form action="uploadImg">
-            <label for="img">Select image:</label>
-            <input type="file" id="img" name="img" accept="image/*" style="background-color: #FBCB04;" capture>
-            <input class="btn btn-primary btn-shadow btn-lg" type="submit" style="width: 150px; font-size: medium;" name="submit" value="Upload">
-        </form> -->
         <h2 class="display-2 mb-4">Club Name</h2><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
     </div>
 </div>	<!-- Blog Section -->
@@ -148,9 +138,20 @@
         <div class="section-content" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="mb-2">Make a beautiful website, or million of them</h2>
+                    <h2 class="mb-2">Change your display image</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, veritatis qui eligendi delectus quia fuga!</p>
-                    <a class="btn btn-outline-primary btn-lg">FEATURES</a>
+                    <form method="post" name="loginClub" action="loginClub">
+                        {% csrf_token %}
+              
+                          <div class="row">
+                              <div class="col-md-12 form-group">
+                                  <input type="text" class="form-control" id="img-url" name="img-url" placeholder="Image URL">
+                              </div>
+                              <div class="col-md-12 text-center"><br>
+                                  <input class="btn btn-primary btn-shadow btn-lg" style="width: 150px; font-size: medium;" type="submit" name="upload" value="Upload">
+                                </div>
+                          </div>
+                      </form>
                 </div>
             </div>
         </div>
