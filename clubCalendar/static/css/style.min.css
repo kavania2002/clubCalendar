@@ -10,6 +10,48 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 300; }
 
+/* ---------------------------------drop-------------------------------------- */
+
+
+.dropdown{
+  color: #fff;
+  font-family: 'Comfortaa', cursive;;
+  font-size: 20px;
+  transition: .3s ease; 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: #fff;
+  font-family: 'Comfortaa', cursive;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  background-color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {opacity: 0.5;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {opacity: 0.5;}
+
+/* ----------------------------drop------------------------------------------- */
+
+
 h1,
 h2,
 h3,
@@ -76,11 +118,14 @@ section {
   font-size: 40px;
   color: #000; }
 
+
 .navbar-nav .nav-link {
   color: #fff;
-  font-family: 'Comfortaa', cursive;;
+  cursor: pointer;
+  font-family: 'Comfortaa', cursive;
   font-size: 20px;
   transition: .3s ease; }
+
 
 .navbar-nav:hover li a {
   opacity: 0.5; }
@@ -688,7 +733,6 @@ section {
 .blog-content .img.float-right {
   margin: 15px 0 15px 15px; }
 
-  
 /*=====  End of BLOG  ======*/
 /*====================================
 =            FORM CONTROL            =
