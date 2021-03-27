@@ -343,6 +343,7 @@ section {
   transform-origin: 50% 50%;
   left: 5%;
   top: 50%;
+  z-index: 11;
   animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite; }
 
 .circle-2 {
