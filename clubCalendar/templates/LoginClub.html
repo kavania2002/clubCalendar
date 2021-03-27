@@ -42,7 +42,10 @@
                 <div class="col-md-12 form-group">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password*" required>
                 </div>
-                <h3 style="margin:auto; background-color: #292929; border-radius: 50px;">&nbsp;&nbsp;The Password doesn't match&nbsp;&nbsp;</h3>
+
+                {% for message in messages %}
+                <h3 style="margin:auto; background-color: #292929; border-radius: 50px;">&nbsp;&nbsp;{{message}}&nbsp;&nbsp;</h3>
+                {% endfor %}
                 <div class="col-md-12 text-center"><br>
                     <input class="btn btn-primary btn-shadow btn-lg" style="width: 150px; font-size: medium;" type="submit" name="submit" value="Sign In">
                 </div>
