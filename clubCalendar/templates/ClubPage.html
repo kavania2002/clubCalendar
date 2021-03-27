@@ -4,12 +4,17 @@
 {% load static %}
 
 {% block content %}	
-</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/blog-3.jpg)">
-  <div class="container text-center">
-    <h1 class="display-2 mb-4">Blog</h1>
-  </div>
+</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
+    <div class="container text-center">
+        <form action="">
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*" style="background-color: #FBCB04;">
+            <input class="btn btn-primary btn-shadow btn-lg" type="submit" style="width: 150px; font-size: medium;" name="submit" value="Upload">
+        </form>
+        <h2 class="display-2 mb-4">Club Name</h2><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
+    </div>
 </div>	<!-- Blog Section -->
-<section id="blog" class="bg-grey">
+<section id="blog" class="bg-grey" style="background-color: #292929; color:#f5f5f5;">
     <div class="container">
         <div class="section-content">
             <div class="title-wrap mb-5" data-aos="fade-up">
@@ -18,20 +23,20 @@
             </div>
             <div class="row">
                 <!-- Blog -->
-                <div class="col-md-12 blog-holder">
+                <div class="col-md-12 blog-holder" >
                     <div class="row">
                         <!-- Blog Item -->
-                        <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
-                            <div class="blog-item">
+                        <div class="col-md-4 blog-item-wrapper" data-aos="fade-up" >
+                            <div class="blog-item" style="background-color: #292929; color:#f5f5f5;">
                                 <div class="blog-img">
-                                    <a href="single.html"><img src="img/blog-1.jpg" alt=""></a>
+                                    <a href="single.html"><img src="{% static 'img/blog-1.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="blog-text">
                                     <div class="blog-tag">
                                         <a href="#"><h6><small>CODE</small></h6></a>
                                     </div>
                                     <div class="blog-title">
-                                        <a href="single.html"><h4>Amazing Blog Title</h4></a>
+                                        <a href="single.html"><h4 style="color: #f5f5f5;">Amazing Blog Title</h4></a>
                                     </div>
                                     <div class="blog-meta">
                                         <p class="blog-date">30 May 2016</p> /
@@ -57,16 +62,16 @@
                         <!-- End of Blog Item -->
                         <!-- Blog Item -->
                         <div class="col-md-4 blog-item-wrapper" data-aos="fade-up" data-aos-delay="200">
-                            <div class="blog-item">
+                            <div class="blog-item" style="background-color: #292929; color:#f5f5f5;">
                                 <div class="blog-img">
-                                    <a href="#"><img src="img/blog-2.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'img/blog-2.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="blog-text">
                                     <div class="blog-tag">
                                         <a href="#"><h6><small>SPORTS</small></h6></a>
                                     </div>
                                     <div class="blog-title">
-                                        <a href="#"><h4>Amazing Blog Title</h4></a>
+                                        <a href="#"><h4 style="color: #f5f5f5;">Amazing Blog Title</h4></a>
                                     </div>
                                     <div class="blog-meta">
                                         <p class="blog-date">30 May 2016</p> /
@@ -92,16 +97,16 @@
                         <!-- End of Blog Item -->
                         <!-- Blog Item -->
                         <div class="col-md-4 blog-item-wrapper" data-aos="fade-up" data-aos-delay="400">
-                            <div class="blog-item">
+                            <div class="blog-item" style="background-color: #292929; color:#f5f5f5;">
                                 <div class="blog-img">
-                                    <a href="#"><img src="img/blog-3.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'img/testi-1.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="blog-text">
                                     <div class="blog-tag">
                                         <a href="#"><h6><small>ECONOMY</small></h6></a>
                                     </div>
                                     <div class="blog-title">
-                                        <a href="#"><h4>Amazing Blog Title</h4></a>
+                                        <a href="#"><h4 style="color: #f5f5f5;">Amazing Blog Title</h4></a>
                                     </div>
                                     <div class="blog-meta">
                                         <p class="blog-date">30 May 2016</p> /
