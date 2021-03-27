@@ -45,6 +45,9 @@
                     <div class="col-md-12 form-group">
                         <input type="password" class="form-control" id="confirmPassword" name="pwd2" placeholder="Confirm Password*" required>
                     </div>
+                    {% for message in messages %}
+                    <h3 style="margin:auto; background-color: #292929; border-radius: 50px;">&nbsp;&nbsp;{{message}}&nbsp;&nbsp;</h3>
+                    {% endfor %}
                     <div class="col-md-12 text-center"><br>
                         <input class="btn btn-primary btn-shadow btn-lg" type="submit" style="width: 150px; font-size: medium;" name="submit" value="Sign In">
                     </div>
