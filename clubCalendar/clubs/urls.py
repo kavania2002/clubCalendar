@@ -8,5 +8,6 @@ urlpatterns = [
     path("signClub", views.signClub, name = "signClub"),
     path("loginUser", views.loginUser, name = "loginUser"),
     path("signUser", views.signUser, name = "signUser"),
-    path("singlePost", views.singlePost, name = "singlePost")
+    path("singlePost", views.singlePost, name = "singlePost"),
+    path("UI", views.userInterface, name = "userInterface")
 ]

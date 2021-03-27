@@ -119,3 +119,5 @@ def signUser(request):
         
 def singlePost(request):
     return render(request, "single.html")
+def userInterface(request):
+    return render(request,"UserInterface.html")
