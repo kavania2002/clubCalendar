@@ -6,11 +6,21 @@
 {% block content %}	
 </div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
     <div class="container text-center">
-        <form action="">
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                </div>
+            </div>
+        </div>
+        <!-- <form action="">
             <label for="img">Select image:</label>
-            <input type="file" id="img" name="img" accept="image/*" style="background-color: #FBCB04;">
+            <input type="file" id="img" name="img" accept="image/*" style="background-color: #FBCB04;" capture>
             <input class="btn btn-primary btn-shadow btn-lg" type="submit" style="width: 150px; font-size: medium;" name="submit" value="Upload">
-        </form>
+        </form> -->
         <h2 class="display-2 mb-4">Club Name</h2><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
     </div>
 </div>	<!-- Blog Section -->

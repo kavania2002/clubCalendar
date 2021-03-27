@@ -7,5 +7,6 @@ urlpatterns = [
     path("clubPage", views.clubPage, name = "clubPage"),
     path("signClub", views.signClub, name = "signClub"),
     path("loginUser", views.loginUser, name = "loginUser"),
-    path("signUser", views.signUser, name = "signUser")
+    path("signUser", views.signUser, name = "signUser"),
+    path("singlePost", views.singlePost, name = "singlePost")
 ]
