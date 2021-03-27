@@ -7,7 +7,7 @@
 <div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/bg.jpg' %})">
   <div class="container text-center">
     <h2 class="display-2 mb-4">Single Blog</h2>
-    <h4 class="display-5 mb-4">Club Name</h4>
+    <h4 class="display-5 mb-4">{{post.title}}</h4>
     <hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 200px;">
   </div>
 </div>	<!-- Contact Form Section -->
@@ -18,12 +18,10 @@
             <div class="row">
                 <!-- Single Content Holder -->
                 <div class="col-md-8 offset-md-2 mt-4">
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    <img class="float-left" width="320px" src="{% static 'img/bg.jpg' %}" alt="">
-                    <p>Consectetur adipisicing elit. Sint, corrupti deleniti, rem mollitia quam cum quo, animi ipsa praesentium officiis ducimus! Modi aperiam, nulla ipsum, totam natus consequuntur fugiat blanditiis.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum, ut magni cupiditate. Nihil ipsum debitis voluptates voluptate illum consectetur sapiente dolorem facilis, eum nobis sequi eveniet assumenda vel voluptatem!</p>
-                    <p>Consectetur adipisicing elit. Sint, corrupti deleniti, rem mollitia quam cum quo, animi ipsa praesentium officiis ducimus! Modi aperiam, nulla ipsum, totam natus consequuntur fugiat blanditiis.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum, ut magni cupiditate. Nihil ipsum debitis voluptates voluptate illum consectetur sapiente dolorem facilis, eum nobis sequi eveniet assumenda vel voluptatem!</p>
+                    <h4>{{post.clubName.name}}</h4>
+                    <img class="float-left" width="320px" src="{{post.link}}" alt="">
+                    <p>{{post.description}}</p>
+
                 </div>
                 <!-- End of Contact Form Holder -->
             </div><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 350px;">
