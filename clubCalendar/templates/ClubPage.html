@@ -5,12 +5,25 @@
 
 {% block content %}	
 </div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
+    <div class="rectangle-transparent-1"></div>
+    <div class="rectangle-transparent-2"></div>
+
     <div class="container text-center">
         <div class="avatar-upload">
             <div class="avatar-edit">
-                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                <label for="imageUpload"></label>
+                <!-- <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload" style="cursor: pointer;"></label> -->
+                <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"></p>
+                <p><label for="file"></label></p>
+                <p><img id="output" width="200" height="200" style="border: 2px solid black; border-radius: 100px;"/></p>
             </div>
+            <!-- src="{% static 'profileDefault.png' %}"  -->
+            <script>
+                var loadFile = function (event) {
+                    var image = document.getElementById('output');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                };
+            </script>
             <div class="avatar-preview">
                 <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
                 </div>
@@ -21,7 +34,8 @@
             <input type="file" id="img" name="img" accept="image/*" style="background-color: #FBCB04;" capture>
             <input class="btn btn-primary btn-shadow btn-lg" type="submit" style="width: 150px; font-size: medium;" name="submit" value="Upload">
         </form> -->
-        <h2 class="display-2 mb-4">Club Name</h2><hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
+        <h2 class="display-2 mb-4">Club Name</h2>
+        <hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
     </div>
 </div>	<!-- Blog Section -->
 <section id="blog" class="bg-grey" style="background-color: #292929; color:#f5f5f5;">
@@ -60,10 +74,9 @@
                                     </div>
                                     <div class="blog-share-wrapper">
                                         <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
                                         </a>
                                         <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
+                                            <span class="lnr lnr-link"></span>
                                         </a>
                                     </div>
                                 </div>
@@ -95,10 +108,9 @@
                                     </div>
                                     <div class="blog-share-wrapper">
                                         <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
                                         </a>
                                         <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
+                                            <span class="lnr lnr-link"></span>
                                         </a>
                                     </div>
                                 </div>
@@ -130,10 +142,9 @@
                                     </div>
                                     <div class="blog-share-wrapper">
                                         <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
                                         </a>
                                         <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
+                                            <span class="lnr lnr-link"></span>
                                         </a>
                                     </div>
                                 </div>
@@ -149,13 +160,27 @@
 </section>
 <!-- End of Blog Section -->	<!-- Features Section-->
 <section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
     <div class="container">
         <div class="section-content" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="mb-2">Make a beautiful website, or million of them</h2>
+                    <h2 class="mb-2">Change your display image</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, veritatis qui eligendi delectus quia fuga!</p>
-                    <a class="btn btn-outline-primary btn-lg">FEATURES</a>
+                    <form method="post" name="loginClub" action="loginClub">
+                        {% csrf_token %}
+              
+                          <div class="row">
+                              <div class="col-md-12 form-group">
+                                  <input type="text" class="form-control" id="img-url" name="img-url" placeholder="Image URL">
+                              </div>
+                              <div class="col-md-12 text-center"><br>
+                                  <input class="btn btn-primary btn-shadow btn-lg" style="width: 150px; font-size: medium;" type="submit" name="upload" value="Upload">
+                                </div>
+                          </div>
+                      </form>
                 </div>
             </div>
         </div>
