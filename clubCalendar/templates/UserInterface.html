@@ -11,7 +11,15 @@
         <div class="section-content" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12 text-center"><br><br><br><br>
-                    <h2 style="font-size: 40px;" class="mb-2">Hi User!</h2>
+                    {% if user.logged %}
+                    <h2 style="font-size: 40px;" class="mb-2">Hi {{user.name}}!</h2>
+
+                    {% elif club.logged %}
+                    <h2 style="font-size: 40px;" class="mb-2">Hi {{club.name}} members</h2>
+                    
+                    {% else %}
+                    <h2 style="font-size: 40px;" class="mb-2">Hi User</h2>
+                    {% endif %}
                     <p>Latest Events and their Intel!</p>
                 </div>
             </div>
@@ -34,7 +42,7 @@
                         <div class="col-md-4 blog-item-wrapper" data-aos="fade-up" >
                             <div class="blog-item" style="background-color: #292929; color:#f5f5f5;">
                                 <div class="blog-img">
-                                    <img src="{{ post.link }}" alt="">
+                                    <img src="{{ post.image }}" alt="">
                                 </div>
                                 <div class="blog-text">
                                     <div class="blog-tag">

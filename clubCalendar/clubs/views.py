@@ -133,11 +133,20 @@ def signUser(request):
         return render(request, "SignUser.html")
         
 def singlePost(request,title):
+    posts = Post.objects.all()
+    clubs = Club.objects.all()
     if (request.method == "POST"):
         pass
     else:
         post = Post.objects.get(title = title)
-        return render(request, "single.html", {'post':post})
+        userLog = User.objects.filter(logged = True)
+        clubLog = Club.objects.filter(logged = True)
+        if (len(userLog) > 0):
+            return render(request,"single.html", {'posts':posts, 'clubs':clubs, 'club':clubLog, 'user':userLog[0], 'post':post})
+        elif (len(clubLog) > 0):
+            return render(request,"single.html", {'posts':posts, 'clubs':clubs, 'club':clubLog[0], 'user':userLog, 'post':post})
+        else:
+            return render(request,"single.html", {'posts':posts, 'clubs':clubs, 'club':clubLog, 'user':userLog, 'post':post})
 
 
 
