@@ -48,8 +48,10 @@ def loginUser(request):
             if (users.exists()):
                 for i in users:
                     if (i.password == pwd):
+                        i.logged = True
+                        i.save()
                         print("Successfully Logged in")
-                        return redirect("")
+                        return redirect("userInterface")
 
                 else:
                     messages.info(request,"Incorrect Password")
