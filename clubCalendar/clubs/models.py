@@ -32,6 +32,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     tags = models.CharField(max_length=100)
     likes = models.IntegerField()
+    meet_link= models.TextField(max_length=2000)
 
 
     def __str__(self):

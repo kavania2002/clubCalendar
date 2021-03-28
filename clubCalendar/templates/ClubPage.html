@@ -4,7 +4,7 @@
 {% load static %}
 
 {% block content %}	
-<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({% static 'img/blog-4.jpg' %})">
+<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url({{club.image}})">
     <div class="rectangle-transparent-1"></div>
     <div class="rectangle-transparent-2"></div>
     <div class="container text-center">
@@ -50,11 +50,7 @@
                                         <a class="blog-share" href="{{post.link}}">
                                             <span class="lnr lnr-link"></i>
                                         </a>
-<<<<<<< HEAD
-                                        <a class="blog-share">
-=======
                                         <a class="blog-share" href="{% url 'singlePost' post.title %}">
->>>>>>> bd5d7ff795e71699ff61b433f23025a047d06a0b
                                             <i class="lnr lnr-bubble"></i>
                                         </a>
                                     </div>
