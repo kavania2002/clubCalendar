@@ -34,7 +34,7 @@
                                         <a href="#"><h6><small>{{ post.tag }}</small></h6></a>
                                     </div>
                                     <div class="blog-title">
-                                        <a href="singlePost/{{post.title}}"><h4 style="color: #f5f5f5;">{{post.title}}</h4></a>
+                                        <a href="{% url 'singlePost' post.title %}"><h4 style="color: #f5f5f5;">{{post.title}}</h4></a>
                                     </div>
                                     <div class="blog-meta">
                                         <p class="blog-date"></p> /
@@ -47,10 +47,10 @@
                                         <p>{{post.clubName.name}}</p>
                                     </div>
                                     <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
+                                        <a class="blog-share" href="{{post.link}}">
                                             <span class="lnr lnr-link"></i>
                                         </a>
-                                        <a class="blog-share" href="{% url 'clubPage' club.name%}'#img-url'">
+                                        <a class="blog-share" href="{% url 'singlePost' post.title %}">
                                             <i class="lnr lnr-bubble"></i>
                                         </a>
                                     </div>

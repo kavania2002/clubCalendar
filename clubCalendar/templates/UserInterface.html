@@ -62,10 +62,10 @@
                                         <p>{{post.clubName.name}}</p>
                                     </div>
                                     <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
+                                        <a class="blog-share" href="{{post.link}}">
                                             <span class="lnr lnr-link"></i>
                                         </a>
-                                        <a class="blog-share" href="google.com">
+                                        <a class="blog-share" href="{% url 'singlePost' post.title %}">
                                             <i class="lnr lnr-bubble"></i>
                                         </a>
                                     </div>
