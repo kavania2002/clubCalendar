@@ -194,7 +194,7 @@ def eventForm(request):
         meetLink = request.POST['meetLink']
         image = request.POST['imageUrl']
     
-        post = Post.objects.create(clubName =  clubLog[0],title = title, link = link, sortDesc = shortDesc, description = longDesc, image = image, likes = 0)
+        post = Post.objects.create(clubName =  clubLog[0],title = title, link = link, sortDesc = shortDesc, description = longDesc, image = image, likes = 0, meet_link= meetLink)
         post.save()
 
         return redirect("userInterface")
