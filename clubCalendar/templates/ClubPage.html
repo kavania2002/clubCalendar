@@ -76,14 +76,13 @@
         <div class="section-content" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="mb-2">Change your display image</h2>
+                    <h2 class="mb-2">Mail Us for any Queries</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, veritatis qui eligendi delectus quia fuga!</p>
-                    <form method="post" name="loginClub" action="loginClub">
+                    <form name="loginClub" action="mailto:{{club.email}}">
                         {% csrf_token %}
-              
                           <div class="row">
                               <div class="col-md-12 form-group">
-                                  <input type="text" class="form-control" id="img-url" name="img-url" placeholder="Image URL">
+                                  <input type="text" class="form-control" id="emailQueries" name="emailQueries" placeholder="Image URL">
                               </div>
                               <div class="col-md-12 text-center"><br>
                                   <input class="btn btn-primary btn-shadow btn-lg" style="width: 150px; font-size: medium;" type="submit" name="upload" value="Upload">
