@@ -24,3 +24,17 @@
 - **Backend:** Django
 
 
+## Project Maintainer 
+
+<table>
+  <tbody><tr>
+    <td align="center"><a href="https://github.com/kavania2002"><img alt="" src="https://avatars.githubusercontent.com/u/72624080?s=400&u=f26f84c44c707216e4a77b21755fe2f93b9775ed&v=4" width="130px;"><br><sub><b>
+ Kavan </b></sub></a><br><a href="" title="Code">💻 </a></td></a></td>
+    <td align="center"><a href="https://github.com/AkshilVT"><img alt="" src="https://avatars.githubusercontent.com/u/75160883?v=4" width="130px;"><br><sub><b>
+ Akshil </b></sub></a><br><a href="" title="Code">💻 </a></td></a></td>
+    <td align="center"><a href="https://github.com/heet9201"><img alt="" src="https://avatars.githubusercontent.com/u/78638901?v=4" width="130px;"><br><sub><b>
+ Heet </b></sub></a><br><a href="" title="Code">💻 </a></td></a></td>
+    <td align="center"><a href="https://github.com/NyctophileOtaku"><img alt="" src="https://avatars.githubusercontent.com/u/80686212?v=4" width="130px;"><br><sub><b>
+ Rajan </b></sub></a><br><a href="" title="Code">💻 </a></td></a></td>
+  </tr>
+</tbody></table>
