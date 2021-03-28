@@ -23,7 +23,13 @@
 - **Frontend:** HTML/CSS/Bootstrap/JavaScript
 - **Backend:** Django
 
+## Screenshot
+![image](https://user-images.githubusercontent.com/72624080/112748890-7ac15600-8fdc-11eb-8204-51f8bca0cc71.png)
+![image](https://user-images.githubusercontent.com/72624080/112748882-739a4800-8fdc-11eb-868f-219094ce15db.png)
+![image](https://user-images.githubusercontent.com/72624080/112748899-801ea080-8fdc-11eb-94e9-011b0fcd99e0.png)
+![image](https://user-images.githubusercontent.com/72624080/112748901-844abe00-8fdc-11eb-8cd2-f25391286b19.png)
 
+<br><br>
 ## Project Maintainer 
 
 <table>
