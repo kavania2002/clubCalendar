@@ -43,10 +43,13 @@
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email*" required>
                 </div>
                 <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" id="imageUrl" name="imageUrl" placeholder="Image URL*" required>
+                </div>
+                <div class="col-md-12 form-group">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password*" required>
                 </div>
                 <div class="col-md-12 form-group">
-                    <input type="password" class="form-control" id="confirmpassword" name="pwd2" placeholder="Confirm Password*" required>
+                    <input type="password" class="form-control" id="confirmpassword" name="pwd2" placeholder="Confirm Pwd*" required>
                 </div>
                 {% for message in messages %}
                 <h3 style="margin:auto; background-color: #292929; border-radius: 50px;">&nbsp;&nbsp;{{message}}&nbsp;&nbsp;</h3>
