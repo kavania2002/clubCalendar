@@ -95,7 +95,7 @@ git push
 
 - Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) !
 
-- **Congratulations!** Sit and relax, you've made your contribution to [MobiMart](https://github.com/kavania2002/clubCamp) project.
+- **Congratulations!** Sit and relax, you've made your contribution to [clubCamp](https://github.com/kavania2002/clubCamp) project.
 
 - :trophy: After this, project leaders and mentors will review the changes and will merge your PR if they are found good, otherwise we will suggest the required changes.\*\*\*
 
