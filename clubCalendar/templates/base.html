@@ -65,7 +65,10 @@
                                 <a href="signUser"><h6>Sign Up</h6></a>
                             </div>
                         </div>
-                    {% else %}  
+                    {% elif club.logged %}  
+                        <a href = "eventForm" class="nav-link club">Event Form</a>
+                        <a href = "logout" class="nav-link club">Logout</a>
+                    {% else %}
                         <a href = "logout" class="nav-link club">Logout</a>
                     {% endif %}
                     <li class="nav-item">

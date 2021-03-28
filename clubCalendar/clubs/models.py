@@ -23,10 +23,12 @@ class Club(models.Model):
         return self.name
 
 class Post(models.Model):
-    clubName = models.OneToOneField(Club, on_delete=models.CASCADE)
+    clubName = models.ForeignKey(Club, on_delete=models.CASCADE, blank=True, null=True)
     title = models.CharField(max_length=100)
+    sortDesc = models.CharField(max_length=100)
     description = models.TextField()
     link = models.TextField(max_length=2000)
+    image = models.TextField(max_length=5000)
     date = models.DateTimeField(auto_now_add=True)
     tags = models.CharField(max_length=100)
     likes = models.IntegerField()

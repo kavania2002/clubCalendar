@@ -10,5 +10,6 @@ urlpatterns = [
     path("signUser", views.signUser, name = "signUser"),
     path("singlePost/<title>", views.singlePost, name = "singlePost"),
     path("", views.userInterface, name = "userInterface"),
-    path("logout",views.logout, name = "logout")
+    path("logout",views.logout, name = "logout"),
+    path('eventForm', views.eventForm, name="eventForm")
 ]

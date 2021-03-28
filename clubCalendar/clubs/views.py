@@ -71,13 +71,17 @@ def clubPage(request, name):
     if (request.method == "POST"):
         pass
     else:
-        user = User.objects.get(logged = True)
+        if (User.objects.filter(logged = True).exists()):
+            user = User.objects.get(logged = True)
+        else:
+            user = User.objects.filter(logged = True)
         club = Club.objects.get(name = name)
         posts = []
         for i in Post.objects.all():
             if i.clubName.name == name:
                 posts.append(i)
         return render(request, "ClubPage.html", {'club':club, 'posts':posts,'user':user})
+        
 
 def signClub(request):
     clubs = Club.objects.all()
@@ -165,3 +169,30 @@ def logout(request):
         i.save()
 
     return redirect("userInterface")
+
+
+def eventForm(request):
+    posts = Post.objects.all()
+    clubs = Club.objects.all()
+    if (request.method == "POST"):
+        clubLog = Club.objects.filter(logged = True)
+        title = request.POST['name']
+        link = request.POST['link']
+        shortDesc = request.POST['shortDescri']
+        longDesc = request.POST['message']
+        meetLink = request.POST['meetLink']
+        image = request.POST['imageUrl']
+    
+        post = Post.objects.create(clubName =  clubLog[0],title = title, link = link, sortDesc = shortDesc, description = longDesc, image = image, likes = 0)
+        post.save()
+
+        return redirect("userInterface")
+    else:
+        userLog = User.objects.filter(logged = True)
+        clubLog = Club.objects.filter(logged = True)
+        if (len(userLog) > 0):
+            return render(request,"clubEventform.html", {'posts':posts, 'clubs':clubs, 'club':clubLog, 'user':userLog[0]})
+        elif (len(clubLog) > 0):
+            return render(request,"clubEventform.html", {'posts':posts, 'clubs':clubs, 'club':clubLog[0], 'user':userLog})
+        else:
+            return render(request,"clubEventform.html", {'posts':posts, 'clubs':clubs, 'club':clubLog, 'user':userLog})

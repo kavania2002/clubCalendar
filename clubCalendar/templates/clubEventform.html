@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block content %}
+<div class="jumbotron d-flex align-items-center">
+    <!-- <div class="container text-left">
+    <h1 class="display-1 mb-4">Login</h1>
+  </div> -->
+    <div class="rectangle-1"></div>
+    <div class="rectangle-2"></div>
+    <div class="rectangle-transparent-1"></div>
+    <div class="rectangle-transparent-2"></div>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    <div class="triangle triangle-1">
+        <img src="{% static 'img/obj_triangle.png' %}" alt="">
+    </div>
+    <div class="triangle triangle-2">
+        <img src="{% static 'img/obj_triangle.png' %}" alt="">
+    </div>
+    <div class="triangle triangle-3">
+        <img src="{% static 'img/obj_triangle.png' %}" alt="">
+    </div>
+    <div class="triangle triangle-4">
+        <img src="{% static 'img/obj_triangle.png' %}" alt="">
+    </div>
+    <div class="container" style="width: 1000px;">
+        <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
+            <div class="container text-center">
+                <h3 class="display-1 mb-4" style="margin: 150px 0px;
+                font-size: 45px">Form for the new post</h3>
+                <hr style="border-top: 10px solid #ffff; border-radius: 5px; width: 100px;">
+            </div><br>
+            <form method="post" name="eventForm">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Event Name*"
+                            required>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" id="link" name="link" placeholder="Registration Link*"
+                            required>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="" class="form-control" id="shortDescri" name="shortDescri"
+                            placeholder="Short Description*" required>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <textarea class="form-control" id="message" name="message" rows="6"
+                            placeholder="Long Description"></textarea>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" id="name" name="meetLink" placeholder="Meet Link*"
+                            required>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" id="imageUrl" name="imageUrl" placeholder="Image URL*"
+                            required>
+                    </div>
+                    <div class="col-md-12 text-center"><br>
+                        <input href= "#" class="btn btn-primary btn-shadow btn-lg" type="submit" style="width: 150px; font-size: medium;" name="submit" value="Submit">
+                    </div>
+
+
+                    {% for message in messages %}
+                    <h3 style="margin:auto; background-color: #292929; border-radius: 50px;">
+                        &nbsp;&nbsp;{{message}}&nbsp;&nbsp;</h3>
+                    {% endfor %}
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 
