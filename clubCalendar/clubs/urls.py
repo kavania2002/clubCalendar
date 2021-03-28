@@ -12,4 +12,5 @@ urlpatterns = [
     path("", views.userInterface, name = "userInterface"),
     path("logout",views.logout, name = "logout"),
     path('eventForm', views.eventForm, name="eventForm")
+
 ]
