@@ -17,6 +17,7 @@
 - Aiming to have tags for each events/workshops
 - Based on the tags, users might get recommendations
 - Might add features like few events/workshops might be open for all and few of them restricted to university students
+- Integration with third party streaming platform
 
 ## Tech Stack
 - **Frontend:** HTML/CSS/Bootstrap/JavaScript
